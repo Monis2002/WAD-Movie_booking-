@@ -1,0 +1,54 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('home.jpg'); /* Replace 'home.jpg' with the URL or path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* Ensure relative positioning for absolute positioning of the white box */
+}
+
+.content-container {
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust the last value (0.7) for the desired transparency level (0 to 1) */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
+}
+
+.home-heading {
+    color: #333;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.space {
+    height: 20px;
+}
