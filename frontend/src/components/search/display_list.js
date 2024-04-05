@@ -1,35 +1,26 @@
-import React,{useState} from "react"
-import "./display_list.css"
+import React, { useState, useEffect } from "react";
+import "./display_list.css";
 import { useHistory } from "react-router-dom";
-import { useEffect } from "react";
 import axios from "axios";
 
-
-
-const Display_list=()=>{
-
+const Display_list = () => {
   const history = useHistory();
+  const [movies, setMovies] = useState([]);
 
-  const [movies,setmovies]=useState([])
-
-  useEffect(()=>{
-    fetch("http://localhost:3000/all_movies",{
-      method:"GET"
+  useEffect(() => {
+    fetch("http://localhost:3000/all_movies", {
+      method: "GET"
     })
-    .then((res)=>res.json())
-    .then((data)=>{
-      console.log(data)
-      setmovies(data.data)
-    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setMovies(data.data);
+      });
+  }, []);
 
-  },[])
-
-
-    return (
-      <div>
-       <h1>
-        available
-       </h1>
+  return (
+    <div className="display-list-container">
+      <h1>Available</h1>
       <table>
         <thead>
           <tr>
@@ -49,14 +40,13 @@ const Display_list=()=>{
             ))
           ) : (
             <tr>
-              <td colSpan="2">No data available</td>
+              <td colSpan="3">No data available</td>
             </tr>
           )}
         </tbody>
       </table>
-    
     </div>
-    )
-}
+  );
+};
 
-export default Display_list
+export default Display_list;

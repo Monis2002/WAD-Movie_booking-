@@ -10,18 +10,8 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('home.jpg'); /* Replace 'home.jpg' with the URL or path to your image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative; /* Ensure relative positioning for absolute positioning of the white box */
-}
-
-.content-container {
-    background-color: rgba(255, 255, 255, 0.7); /* Adjust the last value (0.7) for the desired transparency level (0 to 1) */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
+     /* Background color instead of image */
+    position: relative;
 }
 
 .home-heading {
@@ -31,8 +21,24 @@ body, html {
 .button-container {
     margin-top: 20px;
     display: flex;
+    justify-content: center; /* Align buttons in the center */
+}
+
+.button-group {
+    margin: 0 10px; /* Adjust margin between button groups */
+}
+
+.button-wrapper {
+    display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.button-image {
+    width: 250px; /* Adjust image width as needed */
+    height: 250px; /* Adjust image height as needed */
+    margin-bottom: 10px;
+    margin-left: 30px;
 }
 
 .button {
@@ -40,15 +46,15 @@ body, html {
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
-    margin: 10px;
     border-radius: 10px;
     transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+
+.button-right{
+    margin-left: 40px;
 }
 
 .button:hover {
     background-color: #0056b3;
-}
-
-.space {
-    height: 20px;
 }

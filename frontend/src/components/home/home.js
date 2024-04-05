@@ -5,14 +5,31 @@ import { useHistory } from "react-router-dom";
 const Home = () => {
     const history = useHistory();
 
+    const handleAvailableShowsClick = () => {
+        history.push("/display_list");
+    };
+
+    const handleBookAShowClick = () => {
+        history.push("/book");
+    };
+
     return (
         <div className="home-container">
             <h1 className="home-heading">Home</h1>
-            <div className="button-container">
-                <div className="button" onClick={() => { history.push("/display_list") }}>Available Shows</div>
-                <div className="space"></div> {/* Space between buttons */}
-                <div className="button" onClick={() => { history.push("/book") }}>Book a Show</div>
-            </div>
+            <form className="button-container">
+                <div className="button-group">
+                    <div className="button-wrapper">
+                        <img src={require("./home_img.jpg")} alt="Image 1" className="button-image" />
+                        <button type="button" className="button" onClick={handleAvailableShowsClick}>Available Shows</button>
+                    </div>
+                </div>
+                <div className="button-group">
+                    <div className="button-wrapper">
+                        <img src={require("./home_img.jpg")} alt="Image 2" className="button-image" />
+                        <button type="button" className="button button-right" onClick={handleBookAShowClick}>Book a Show</button>
+                    </div>
+                </div>
+            </form>
         </div>
     );
 }

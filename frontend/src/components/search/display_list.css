@@ -1,0 +1,48 @@
+/* display_list.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('display_list_img.jpg'); /* Replace 'your-background-image.jpg' with the URL or path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.display-list-container {
+    padding: 50px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid #000;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e2e2e2;
+}
+
+h1 {
+    color: #333;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
